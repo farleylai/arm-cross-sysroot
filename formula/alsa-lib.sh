@@ -25,6 +25,12 @@ if [ $? == 1 ]; then
 	
 	FU_file_get_download
 	FU_file_extract_tar
+        
+#        cd "${GV_source_dir}/${GV_dir_name}/src/pcm"
+#        src=pcm_direct.c 
+#        bak=${src}.bak
+#        mv $src $bak
+#        awk -v nlines=5 '/^union semun/ {for (i=0; i<nlines; i++) {getline}; next} 1' $bak > $src
 		
 	FU_build_configure
 	FU_build_make
